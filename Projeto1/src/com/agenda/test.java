@@ -7,7 +7,7 @@ public class test {
 		contatos.adicionarContato("Wesley", 991029009);
 		contatos.adicionarContato("Eliel", 1123131232);
 
-		contatos.removerContato(2);
+		contatos.removerContato(1);
 		contatos.visualizarContatos();
 	}
 

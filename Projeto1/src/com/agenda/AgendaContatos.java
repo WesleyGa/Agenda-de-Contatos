@@ -34,9 +34,8 @@ public class AgendaContatos {
 			System.out.println("Nenhum contato.");
 		} else {
 
-			for (int i = 0; i < contatos.size(); i++) {
-				Contato con = contatos.get(i);
-				System.out.println((i + 1) + "º contato:");
+			for (Contato con : contatos) {
+				System.out.println(con.getNumero() + "º contato:");
 				System.out.println("Nome: " + con.getNome());
 				System.out.println("Telefone: " + con.getTelefone());
 				System.out.println("------------------------------");
@@ -45,7 +44,7 @@ public class AgendaContatos {
 		}
 
 	}
-    
+
 	public void removerContato(int numeroContato) {
 		boolean removido = false;
 		for (int i = 0; i < contatos.size(); i++) {
