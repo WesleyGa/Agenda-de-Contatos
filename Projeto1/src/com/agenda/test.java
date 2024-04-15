@@ -3,10 +3,12 @@ package com.agenda;
 public class test {
 	public static void main(String[] args) {
 
-		AgendaContatos c1 = new AgendaContatos();
-		c1.adicionarContato(new Contato("Wesley", 991029009));
-		
-		System.out.println(c1.getContatos());
+		AgendaContatos contatos = new AgendaContatos();
+		contatos.adicionarContato("Wesley", 991029009);
+		contatos.adicionarContato("Eliel", 1123131232);
+
+		contatos.removerContato(2);
+		contatos.visualizarContatos();
 	}
 
 }
