@@ -45,6 +45,28 @@ public class AgendaContatos {
 
 	}
 
+	public void alterarContato(int numero, String novoNome, int novoNumero) {
+		boolean encontrado = false;
+		for (int i = 0; i < contatos.size(); i++) {
+
+			// Esta linha está obtendo o contato na posição i da lista de contatos
+			// (contatos) e armazenando na variável con.
+			Contato con = contatos.get(i);
+			if (con.getNumero() == numero) {
+				con.setNome(novoNome);
+				con.setTelefone(novoNumero);
+				encontrado = true;
+				System.out.println("Contato alterado!!");
+
+				break;
+			}
+		}
+
+		if (!encontrado) {
+			System.out.println("Contato não encontrado");
+		}
+	}
+
 	public void removerContato(int numeroContato) {
 		boolean removido = false;
 		for (int i = 0; i < contatos.size(); i++) {
@@ -53,6 +75,7 @@ public class AgendaContatos {
 				contatos.remove(i);
 				removido = true;
 				System.out.println("Contato removido com sucesso.");
+
 				break; // Sai do loop após remover o contato
 			}
 		}
