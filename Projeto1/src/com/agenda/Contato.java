@@ -9,7 +9,7 @@ public class Contato {
 	public Contato(String nome, int telefone) {
 		this.nome = nome;
 		this.telefone = telefone;
-		
+
 	}
 
 	public String getNome() {
@@ -35,8 +35,6 @@ public class Contato {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-
-	
 
 	@Override
 	public String toString() {

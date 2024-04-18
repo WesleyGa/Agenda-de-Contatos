@@ -78,9 +78,26 @@ public class AgendaContatos {
 
 				break; // Sai do loop após remover o contato
 			}
+
 		}
 		if (!removido) {
 			System.out.println("Contato não encontrado.");
+		}
+	}
+
+	public void buscarContato(String nome) {
+		boolean encontrado = false;
+		for (int i = 0; i < contatos.size(); i++) {
+			Contato con = contatos.get(i);
+			String nomes = nome.trim();
+			if (con.getNome().equalsIgnoreCase(nomes)) {
+				System.out.println(con);
+				encontrado = true;
+
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Não existe nenhum contato com esse nome.");
 		}
 	}
 
